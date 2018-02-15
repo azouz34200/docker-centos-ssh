@@ -1,0 +1,9 @@
+version: '2'
+services:
+  my-centos:
+    build: .
+    image: mycentos:1
+    volumes:
+      - ~/.ssh/id_rsa.pub:/root/.ssh/authorized_keys 
+    ports:
+      - "2222:22"
